@@ -1,0 +1,18 @@
+@import "./../../sassStyles/index";
+
+.services {
+
+    &__title {
+        @include title-main;
+        @include border-bottom;
+        margin-bottom: 2rem;
+    }
+
+    &__menu {
+
+        &__border {
+            @include border-bottom-light;
+            width: 100%;
+        }
+    }   
+}

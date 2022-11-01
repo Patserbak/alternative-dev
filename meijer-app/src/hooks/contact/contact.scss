@@ -1,0 +1,60 @@
+@import "./../../sassStyles/index";
+
+.submitMessage__page {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    grid-column: 2 / -2;
+    grid-row: 1 / 3;
+    min-height: 85vh;
+
+    @media only screen and (max-width: $screen-sm) {
+        grid-column: 1 / -1;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10vh;
+    }
+
+    @media only screen and (min-width: $screen-lg) {
+        grid-row: 2 / 3;
+        min-height: 70vh;
+    }
+
+    margin-bottom: 10vh;
+
+    &--submit {
+        display: none;
+    }
+
+    &--submitted {
+        visibility: hidden;
+    }
+
+    &__text {
+        font-size: var(--font-size-md);
+        font-weight: 100;
+        line-height: 140%;
+
+        padding-right: 10%;
+        padding-left: 10%;
+
+        &__email {
+            margin-top: 3rem;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

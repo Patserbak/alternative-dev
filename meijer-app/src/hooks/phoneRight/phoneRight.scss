@@ -1,0 +1,11 @@
+@import "./../../sassStyles/index";
+
+@include phoneRight(30);
+
+@media only screen and (min-width: $screen-md) {
+    @include phoneRight(40);
+}
+
+@media only screen and (min-width: $screen-lg) {
+    @include phoneRight(50);
+}

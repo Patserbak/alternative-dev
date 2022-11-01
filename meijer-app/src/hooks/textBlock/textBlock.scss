@@ -1,0 +1,19 @@
+@import "./../../sassStyles/index";
+
+.textBlock {
+    width: 100%;
+
+    &__title {
+        @include title-main;
+        display: flex;
+        flex-direction: column;
+        @include border-bottom-light;
+        padding-bottom: 1rem;
+        margin-top: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        @include sub-title-main;
+    }
+}

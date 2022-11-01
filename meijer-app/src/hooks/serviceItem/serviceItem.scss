@@ -1,0 +1,38 @@
+@import "./../../sassStyles/index";
+
+.serviceItem {
+    height: 100%;
+
+    @media only screen and (min-width: $screen-lg) {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__windowWrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__textWrapper {
+
+        color: $font-color;
+        color: #FFF;
+        width: 80%;
+        font-size: var(--font-size-md);
+        font-weight: 100;
+        line-height: 180%;
+
+        & h2 {
+            margin-top: 0;
+        }
+    }
+}
