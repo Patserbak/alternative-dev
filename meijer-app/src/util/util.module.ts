@@ -7,14 +7,14 @@ export const preventDefault = (e: Event) => {
 }
 
 export const disableScroll = () => {
-    window.onwheel = preventDefault;
-    //window.ontouchmove = preventDefault;
+    // window.onwheel = preventDefault;
+    // window.ontouchmove = preventDefault;
     window.addEventListener('touchmove', preventDefault, { passive: false });
 }
 
 export const enableScroll = () => {
     window.onwheel = null;
-    window.removeEventListener('touchmove', preventDefault, {});
+    window.removeEventListener('touchmove', preventDefault);
 }
 
 export const setDarkTheme = () => {

@@ -23,8 +23,11 @@
         stroke-width: 7;
     }
 
-    &:hover .icon__bar {
-        opacity: 0;
+
+    @media (pointer: fine) {
+        &:hover .icon__bar {
+            opacity: 0;
+        }
     }
 
     &--dark {

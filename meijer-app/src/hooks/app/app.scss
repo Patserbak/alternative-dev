@@ -5,6 +5,10 @@
 :root {
     --background-color: $background-color;
     --font-color: $font-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 html {
@@ -85,8 +89,8 @@ a:active {
 
 /* width */
 ::-webkit-scrollbar {
-//     width: 6px;
-//     height: 6px;
+    //     width: 6px;
+    //     height: 6px;
 }
 
 /* Track */

@@ -1,12 +1,12 @@
 @import "./../../sassStyles/index";
 
 
-@include phoneLeft(40);
+@include phoneLeft(30);
 
 @media only screen and (min-width: $screen-md) {
-    @include phoneLeft(50);
+    @include phoneLeft(40);
 }
 
 @media only screen and (min-width: $screen-lg) {
-    @include phoneLeft(60);
+    @include phoneLeft(50);
 }

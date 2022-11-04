@@ -12,7 +12,7 @@ const Footer = ({classNameAdded = '', dark = false}: FooterProps): JSX.Element =
     return (
         <div className={`footer ${classNameAdded} ${dark ? "footer--dark": ""}`}>
             <div className="footer__icons">
-                <a href="/"><Icon classNameAdded={`footer__icons__icon ${dark ? "icon--black" : ""}`} /></a>
+                <Link to="/"><Icon classNameAdded={`footer__icons__icon ${dark ? "icon--black" : ""}`} /></Link>
                 <Link to="/about" className="header__menu__item"><img className={`footer__icons__linkedin-image ${dark ? "footer__icons__linkedin-image--dark" : ""}`} src={LinkedinIcon}/></Link>
             </div>
             <div>

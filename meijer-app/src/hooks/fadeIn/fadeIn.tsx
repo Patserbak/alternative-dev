@@ -13,21 +13,18 @@ interface FadeInProps {
 
 const FadeIn = ({ argPropActive = null, setPropActive = () => { }, children }: FadeInProps): JSX.Element => {
 
-    const [active, setActive] = useState(false);
-
     const ref = useRef<HTMLDivElement>(null);
 
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: [0.3]
     }
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting) {
                 setPropActive(argPropActive);
-                setActive(true);
                 observer.unobserve(ref.current!);
             }
         }, options);
@@ -38,7 +35,7 @@ const FadeIn = ({ argPropActive = null, setPropActive = () => { }, children }: F
 
     return (
         <>
-            <div ref={ref} className={`fadeIn ${active ? 'fadeIn--active' : ''}`}>
+            <div ref={ref} className="fadeIn">
                 {children}
             </div>
         </>

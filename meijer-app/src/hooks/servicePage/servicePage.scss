@@ -30,7 +30,9 @@
 
     &__tile {
         width: 80%;
+        max-width: 600px;
         height: 15vh;
+
 
         @media only screen and (min-width: $screen-lg) {
             width: 50%;
@@ -46,7 +48,7 @@
         @keyframes test {
             to {
                 height: 100vh;
-                width: 90%;
+                width: 65%;
                 margin-top: 0;
             }
         }
@@ -83,18 +85,40 @@
         height: 0;
         padding: auto;
 
+        overflow: hidden;
+
+        max-height: 800px;
+
+        &__border {
+            height: 1px;
+            width: 0%;
+            background-color: #FFF;
+
+            margin: auto;
+
+            &--active {
+                animation: test6 1s forwards ease-out;
+            }
+
+            @keyframes test6 {
+                to {
+                    width: 80%;
+                }
+            }
+        }
+
         @media only screen and (min-width: $screen-lg) {
             width: 70%;
         }
 
-        animation: test3 0.5s forwards ease-out;
+        animation: test3 1s forwards ease-out;
         animation-delay: 4s;
 
         overflow: hidden;
 
         @keyframes test3 {
             to {
-                height: auto;
+                height: 80vh;
             }
         }
 
@@ -104,6 +128,77 @@
                     height: 100vh;
                 }
             }
+        }
+    }
+
+    &__contact {
+        width: 0;
+        height: 0;
+
+        overflow: hidden;
+
+        animation: test9 0.5s forwards ease-out;
+        animation-delay: 4s;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & h2 {
+            color: #FFF;
+        }
+
+        & a {
+            color: #FFF;
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            transition: all 0.5s ease-in-out;
+
+            width: 150px;
+
+            @media only screen and (min-width: $screen-lg) {
+                width: 250px;
+
+            }
+
+            @media (pointer: fine) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            & svg {
+                overflow: hidden;
+
+                width: 100%;
+                height: 100%;
+
+                & path {
+                    fill: #FFF;
+                    // stroke: $color-5;
+                    stroke: #FFF;
+                    stroke-width: 6;
+                }
+            }
+        }
+
+        @keyframes test9 {
+            to {
+                width: 80%;
+                height: 85vh;
+            }
+        }
+
+        @media only screen and (min-width: $screen-lg) {
+
+            @keyframes test9 {
+                to {
+                    width: 80%;
+                    height: 70vh;
+                }
+            }
+
         }
     }
 }

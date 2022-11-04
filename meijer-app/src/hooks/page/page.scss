@@ -2,12 +2,13 @@
 
 .page {
     width: 100vw;
+    max-width: $max-width-screen;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: 20vh auto 15vh;
 
     @media only screen and (min-width: $screen-lg) {
-        grid-template-rows: 20vh auto 30vh;
+        grid-template-rows: min(160px, 20vh) auto min(240px, 30vh);
     }
 }

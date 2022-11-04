@@ -39,7 +39,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1%;
-
+        
         &__icon {
             width: clamp(1vw, 25vw, 30vw);
             @media only screen and (min-width: $screen-lg) {
