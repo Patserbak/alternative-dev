@@ -95,7 +95,6 @@
         transform: translateX(50%) rotate(-30deg) skewX(30deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
         transform: rotate(-45deg) skewX(-2deg) rotateX(-8deg) rotateY(40deg) rotateZ(37deg);
 
-
         --colorFrom: rgb(58, 59, 63);
         --colorTo: rgb(29, 29, 31);
 
@@ -121,6 +120,11 @@
         &--red {
             --colorFrom: rgba(253, 43, 43, 0.9);
             --colorTo: rgba(255, 0, 0, 0.9);
+        }
+
+        &--yellow {
+            --colorFrom: rgba(222, 253, 83);
+            --colorTo: rgba(222, 253, 83, 0.973);
         }
 
         &__base {
@@ -317,8 +321,13 @@
         }
 
         &--red {
-            --colorFrom: rgba(253, 43, 43, 0.9);
-            --colorTo: rgba(255, 0, 0, 0.9);
+            --colorFrom: rgba(255, 67, 67, 0.9);
+            --colorTo: rgba(255, 67, 67, 0.9);
+        }
+
+        &--yellow {
+            --colorFrom: rgba(222, 253, 83);
+            --colorTo: rgba(222, 253, 83, 0.973);
         }
 
         &__base {
@@ -552,5 +561,17 @@
 
         transition: transform 0.5s ease-in-out;
         color: $color-1;
+    }
+}
+
+@mixin loadAnimation {
+    animation: scene3 2.5s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: scale(0.6);
+    transform-origin: 50% 0%;
+
+    @keyframes scene3 {
+        to {
+            transform: scale(1);
+        }
     }
 }

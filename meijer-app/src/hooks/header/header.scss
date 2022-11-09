@@ -127,6 +127,7 @@
         left: 0;
         width: 100vw;
 
+
         @media only screen and (min-width: $max-width-screen) {
             left: calc((100vw - $max-width-screen)/2);
         }
@@ -159,6 +160,7 @@
 
             width: 50%;
             max-width: 250px;
+            padding-bottom: 10vh;
 
             @media (pointer: fine) {
                 &:hover svg path {

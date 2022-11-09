@@ -11,12 +11,13 @@ const Career = (): JSX.Element => {
         <>
             <Header classNameAdded="" />
             <div className="career">
-                <div className="career__text">
-                    <h1>Can You Hack?</h1>
-                    <a href="mailto:hack@meijer.com">hack@meijer.com</a>
-                </div>
                 <div className="career__wrapper">
-                    <Icon classNameAdded="" />
+                    <div className="career__wrapper__bottom">
+                        <div className="career__wrapper__bottom__left">
+                        </div>
+                        <div className="career__wrapper__bottom__right">
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

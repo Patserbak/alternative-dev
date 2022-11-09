@@ -13,7 +13,14 @@ const Landing = (): JSX.Element => {
 
     setLightTheme();
 
-    var optionsObserver = {
+    var optionsObserverMiddle = {
+        threshold: 0.5,
+        root: null,
+        rootMargin: '0%',
+        freezeOnceVisible: true
+    }
+
+    var optionsObserverEnd = {
         threshold: 0.1,
         root: null,
         rootMargin: '0%',
@@ -22,10 +29,10 @@ const Landing = (): JSX.Element => {
 
 
     const middleRef = useRef<HTMLDivElement | null>(null);
-    const middleEntry = useIntersectionObserver(middleRef, optionsObserver);
+    const middleEntry = useIntersectionObserver(middleRef, optionsObserverMiddle);
 
     const endRef = useRef<HTMLDivElement | null>(null);
-    const endEntry = useIntersectionObserver(endRef, optionsObserver);
+    const endEntry = useIntersectionObserver(endRef, optionsObserverEnd);
 
     const messageScreen: JSX.Element = <div className={`landing__middle__messageWrapper ${endEntry?.isIntersecting ? "landing__middle__messageWrapper--active" : ""}`}>
         <div>How can<br /> we help?</div>

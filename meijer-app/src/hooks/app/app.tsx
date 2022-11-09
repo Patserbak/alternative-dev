@@ -8,6 +8,9 @@ import ServicePage from '../servicePage/servicePage';
 import Career from './../career/career';
 import Contact from './../contact/contact';
 import ScrollToTop from '../scrollToTop/scrollToTop';
+import Test from '../test/test';
+import Scene2 from '../scene2/scene2';
+import Scene3 from '../scene3/scene3';
 
 const App = (): JSX.Element => {
 
@@ -29,7 +32,7 @@ const App = (): JSX.Element => {
                 <Route path="/" element={<Page/>}>
                     <Route index element={<Landing/>} />
                     <Route path="/about" element={<About/>}/>
-                    <Route path="/services" element={<ServicePage/>}/>
+                    <Route path="/services" element={<Scene3/>}/>
                     <Route path="/career" element={<Career/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="*" element={<Landing/>}/>

@@ -24,22 +24,22 @@ const ServicePage = (): JSX.Element => {
     }
 
     const webRef = useRef<HTMLDivElement | null>(null);
-    const webEntry = useIntersectionObserver(webRef, optionsObserver); 
+    const webEntry = useIntersectionObserver(webRef, optionsObserver);
 
     const appRef = useRef<HTMLDivElement | null>(null);
-    const appEntry = useIntersectionObserver(appRef, optionsObserver); 
+    const appEntry = useIntersectionObserver(appRef, optionsObserver);
 
     const cloudRef = useRef<HTMLDivElement | null>(null);
-    const cloudEntry = useIntersectionObserver(cloudRef, optionsObserver); 
+    const cloudEntry = useIntersectionObserver(cloudRef, optionsObserver);
 
     const aiRef = useRef<HTMLDivElement | null>(null);
-    const aiEntry = useIntersectionObserver(aiRef, optionsObserver); 
+    const aiEntry = useIntersectionObserver(aiRef, optionsObserver);
 
     useEffect(() => {
         const timer = setTimeout(() => setFreeze(true), 5000);
 
         return () => clearTimeout(timer);
-    }, [])    
+    }, [])
 
     return (
         <>
@@ -105,7 +105,7 @@ const ServicePage = (): JSX.Element => {
                     <ServiceItem classNameAdded="" title={<>Artificial intelligence</>} text={<>We help organisations use the full potential of all it's data by using AI. Is your organisation ready for it?</>} />
                     <div className={`servicePage__service__border ${aiEntry?.isIntersecting && freeze ? "servicePage__service__border--active" : ""}`}></div>
                 </div>
-                <div ref={aiRef}  className="servicePage__contact">
+                <div ref={aiRef} className="servicePage__contact">
                     <h2>Interesed?</h2><br />
                     <Link to="/contact">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 497 90" preserveAspectRatio="xMidYMid meet">
