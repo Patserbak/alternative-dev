@@ -2,38 +2,24 @@
 
 .intro {
     position: fixed;
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(25, 25,25);
-    animation-name: intro-change-background;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
     z-index: $z-index-overlay;
 
-    @include flex-align-justify("center","center");
+    width: 100vw;
+    max-width: $max-width-screen;
+    height: 100vh;
 
-    .intro__logo {
-        font-size: 10rem;
-    }
+    animation: intro 1s forwards ease-out;
+    animation-delay: 0.3s;
 
-    @keyframes intro-change-background {
-        0% {
-            background-color: rgb(25, 25,25);
-            opacity: 1;
-            color: #FFF;
-        }
+    @keyframes intro {
 
-        80% {
-            opacity: 1;
-            background-color: rgb(25, 25,25);
-            color: #FFF;
-            z-index: $z-index-overlay;
-        }
-
-        100% {
-            opacity: 0;
+        to {
+            // opacity: 0;
+            transform: translateY(-100%);
             visibility: hidden;
+            height: 0;
             z-index: -1;
         }
     }

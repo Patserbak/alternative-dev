@@ -23,13 +23,6 @@
         stroke-width: 7;
     }
 
-
-    @media (pointer: fine) {
-        &:hover .icon__bar {
-            opacity: 0;
-        }
-    }
-
     &--dark {
         & .icon__text {
             fill: #FFF;
