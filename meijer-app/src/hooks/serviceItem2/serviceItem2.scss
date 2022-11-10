@@ -1,0 +1,115 @@
+@import "./../../sassStyles/index";
+
+.serviceItem2 {
+
+    width: 100%;
+    overflow: hidden;
+
+    padding-top: 20px;
+    @media only screen and (max-width: $screen-sm) {
+        padding-top: 10px;
+    }
+
+    transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &__tile {
+        width: 60%;
+        height: 15vh;
+        @media only screen and (max-width: $screen-sm) {
+        width: 50%;
+
+            height: 10vh;
+        }
+        max-height: 80px;
+
+        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (pointer: fine) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &--active {
+            width: 60%;
+            height: 40vh;
+            max-height: 300px;
+
+            @media only screen and (max-width: $screen-sm) {
+                width: 80%;
+            }
+
+            @media (pointer: fine) {
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        & svg {
+            cursor: pointer;
+            overflow: hidden;
+
+            width: 100%;
+            height: 100%;
+
+            & path {
+                stroke: $font-color;
+                fill: $font-color;
+                stroke-width: 4;
+                transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+        }
+    }
+
+    &__text {
+
+        width: 60%;
+        @media only screen and (max-width: $screen-sm) {
+            width: 85%;
+        }
+        height: 0px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        opacity: 0;
+        overflow: hidden;
+
+        &__wrapper {
+            color: $font-color;
+            font-size: var(--font-size-md);
+            font-weight: 300;
+            line-height: 180%;
+
+
+            & h2 {
+                margin-top: 0;
+            }
+        }
+
+        &--active {
+            height: 100vh;
+            opacity: 1;
+            max-height: 500px;
+
+            transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+            @media only screen and (max-width: $screen-sm) {
+                height: 50vh;
+                width: 85%;
+            }
+        }
+
+    }
+}

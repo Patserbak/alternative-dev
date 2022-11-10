@@ -1,0 +1,36 @@
+@import "./../../sassStyles/index";
+
+.letsTalk {
+    @include flex-align-justify(center,center);
+    flex-direction: column;
+    width: 100%;
+    height: 30rem;
+
+    &__sentence-1 {
+        text-align: center;
+        font-size: 3rem;
+        width: 80%;
+        @include border-bottom;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    &__sentence-2 {
+        font-size: 2rem;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    &__sentence-2-visible {
+        animation: show-setence-2 1s forwards ease-in-out;
+    }
+}
+
+@keyframes show-setence-2 {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}

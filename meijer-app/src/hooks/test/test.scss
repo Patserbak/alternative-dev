@@ -1,0 +1,30 @@
+@import "./../../sassStyles/index";
+
+.test {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &__wrapper {
+        width: 90%;
+        height: 100vh;
+        min-height: 100vh;
+
+        @media only screen and (min-width: $screen-lg) {
+            width: 55%;
+            height: 80vh;
+            min-height: 80vh;
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+        }
+
+        & svg path {
+            fill: rgb(25, 25, 25);
+            stroke: rgb(25, 25, 25);
+            stroke-width: 6;
+        }
+    }
+
+}

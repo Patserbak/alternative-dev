@@ -1,0 +1,58 @@
+@import "./../../sassStyles/index";
+
+.service {
+    @include sub-title-main;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: white;
+
+    &--left {
+        flex-direction: row-reverse;
+
+        & .service__right {
+            clip-path: circle(0% at 100% 50%);
+        }
+
+        & .service__right--active {
+            animation: show-detail-left 2s forwards ease-in-out;
+        }
+    }
+
+    &__left {
+        @include flex-align-justify(center, center);
+        width: 50%;
+    }
+
+    &__right {
+        width: 50%;
+        clip-path: circle(0% at 0% 50%);
+        overflow: hidden;
+
+        &--active {
+            animation: show-detail-right 2s forwards ease-in-out;
+        }
+    }
+}
+
+@keyframes show-detail-right {
+    0% {
+        clip-path: circle(0% at 0% 50%);
+    }
+
+    100% {
+        clip-path: circle(200% at 0% 50%);
+    }
+}
+
+@keyframes show-detail-left {
+    0% {
+        clip-path: circle(0% at 100% 50%);
+    }
+
+    100% {
+        clip-path: circle(200% at 100% 50%);
+    }
+}

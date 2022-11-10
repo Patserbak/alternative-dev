@@ -1,0 +1,212 @@
+@import "./../../sassStyles/index";
+
+.servicePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+
+    @media only screen and (min-width: $screen-lg) {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+
+    animation: test2 2s forwards ease-out;
+    animation-delay: 2s;
+
+    @keyframes test2 {
+        to {
+            padding-top: 0;
+            padding-bottom: 0h;
+        }
+    }
+
+
+    &__tile {
+        width: 80%;
+        max-width: 600px;
+        height: 15vh;
+
+
+        @media only screen and (min-width: $screen-lg) {
+            width: 50%;
+            margin-top: 5vh;
+        }
+
+        padding-left: auto;
+        padding-right: auto;
+
+        animation: test 2s forwards ease-out;
+        animation-delay: 2s;
+
+        @keyframes test {
+            to {
+                height: 100vh;
+                width: 65%;
+                margin-top: 0;
+            }
+        }
+
+        &__text {
+
+            animation: up 1s forwards ease-out;
+            animation-delay: 0.5s;
+
+            @keyframes up {
+                to {
+                    transform: translateY(-6px);
+                }
+            }
+        }
+
+        & svg {
+            overflow: hidden;
+
+            width: 100%;
+            height: 100%;
+
+            & path {
+                fill: #FFF;
+                // stroke: $color-5;
+                stroke: #FFF;
+                fill: $font-color;
+                stroke: $font-color;
+                stroke-width: 6;
+            }
+        }
+    }
+
+    &__service {
+        width: 100%;
+        height: 0;
+        padding: auto;
+
+        overflow: hidden;
+
+        max-height: 800px;
+
+        &__border {
+            height: 1px;
+            width: 0%;
+            background-color: #FFF;
+            background-color: $font-color;
+
+            margin: auto;
+
+            &--active {
+                animation: test6 1s forwards ease-out;
+            }
+
+            @keyframes test6 {
+                to {
+                    width: 80%;
+                }
+            }
+        }
+
+        @media only screen and (min-width: $screen-lg) {
+            width: 70%;
+        }
+
+        animation: test3 1s forwards ease-out;
+        animation-delay: 4s;
+
+        overflow: hidden;
+
+        @keyframes test3 {
+            to {
+                height: 80vh;
+            }
+        }
+
+        @media only screen and (min-width: $screen-lg) {
+            @keyframes test3 {
+                to {
+                    height: 100vh;
+                }
+            }
+        }
+    }
+
+    &__contact {
+        width: 0;
+        height: 0;
+
+        overflow: hidden;
+
+        animation: test9 0.5s forwards ease-out;
+        animation-delay: 4s;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & h2 {
+            color: #FFF;
+            color: $font-color;
+        }
+
+        & a {
+            color: #FFF;
+            color: $font-color;
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            transition: all 0.5s ease-in-out;
+
+            width: 150px;
+
+            @media only screen and (min-width: $screen-lg) {
+                width: 250px;
+
+            }
+
+            @media (pointer: fine) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            & svg {
+                overflow: hidden;
+
+                width: 100%;
+                height: 100%;
+
+                & path {
+                    fill: #FFF;
+                    // stroke: $color-5;
+                    stroke: #FFF;
+                    fill: $font-color;
+                    stroke: $font-color;
+                    
+                    stroke-width: 6;
+                }
+            }
+        }
+
+        @keyframes test9 {
+            to {
+                width: 80%;
+                height: 85vh;
+            }
+        }
+
+        @media only screen and (min-width: $screen-lg) {
+
+            @keyframes test9 {
+                to {
+                    width: 80%;
+                    height: 70vh;
+                }
+            }
+
+        }
+    }
+}

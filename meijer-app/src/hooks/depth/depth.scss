@@ -1,0 +1,8 @@
+@import "./../../sassStyles/index";
+
+@include depth(800);
+
+.depth__wrapperFloor {
+    @include flex-align-justify(center, center);
+}
+

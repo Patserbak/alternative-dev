@@ -1,0 +1,51 @@
+@import "./../../sassStyles/index";
+
+@mixin pcWindow($width, $height) {
+    .pcWindow {
+        width: 1px*$width;
+        height: 1px*$height;
+        @include box-shadow-window;
+        @include border-radius-window;
+        overflow: hidden;
+
+        &__bar {
+            width: 100%;
+            height: 10%;
+            max-height: 15px;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            gap: 1%;
+            border-radius: 2px 2px 0 0;
+
+            & div {
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+            }
+
+            & #icon-1 {
+                margin-left: 1%;
+                background-color: #FF605C;
+            }
+
+            & #icon-2 {
+                background-color: #FFBD44;
+            }
+
+            & #icon-3 {
+                background-color: #00CA4E;
+            }
+        }
+
+        &__window {
+            width: 100%;
+            height: 90%;
+            background-color: rgb(253, 253, 253);
+            border-radius: 0 0 3px 3px;
+        }
+    }
+}
+
+@include pcWindow(300, 300 );
