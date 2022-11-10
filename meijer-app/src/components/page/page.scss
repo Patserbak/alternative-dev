@@ -1,0 +1,13 @@
+@import "./../../sassStyles/index";
+
+.page {
+    width: 100vw;
+    max-width: $max-width-screen;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: min(240, 20vh) auto min(160, 15vh);
+
+    @media only screen and (min-width: $screen-lg) {
+        grid-template-rows: min(240, 20vh) auto min(160, 30vh);
+    }
+}
