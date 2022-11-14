@@ -8,22 +8,12 @@ import useIntersectionObserver from '../intersectionObserver/intersectionObserve
 
 const Landing = (): JSX.Element => {
 
-    var optionsObserverMiddle = {
-        threshold: 0.5,
-        root: null,
-        rootMargin: '0%',
-        freezeOnceVisible: true
-    }
-
     var optionsObserverEnd = {
         threshold: 0.1,
         root: null,
         rootMargin: '0%',
         freezeOnceVisible: true
     }
-
-    const middleRef = useRef<HTMLDivElement | null>(null);
-    const middleEntry = useIntersectionObserver(middleRef, optionsObserverMiddle);
 
     const endRef = useRef<HTMLDivElement | null>(null);
     const endEntry = useIntersectionObserver(endRef, optionsObserverEnd);
@@ -56,7 +46,7 @@ const Landing = (): JSX.Element => {
                 </div>
                 <div className="landing__border"></div>
                 <div className="landing__middle">
-                    <h1 ref={middleRef} className={`landing__middle__title ${middleEntry?.isIntersecting ? "landing__middle__title--active" : ""}`}>We design, build and maintain digital products. We need some extra text here @Ruben</h1>
+                    <h1 className="landing__middle__title">Intro text here. We need some extra text here @Bart</h1>
                 </div>
                 <div className="landing__border"></div>
                 <div ref={endRef} className={`landing__ending ${endEntry?.isIntersecting ? "landing__ending--active" : ""}`}>
