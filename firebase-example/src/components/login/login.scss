@@ -1,0 +1,26 @@
+@import "./../../sassStyles/index";
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    &__button {
+        font-size: var(--font-size-lg);
+        padding: 2%;
+        transition: all 1s;
+        background-color: #b0eeb3;
+        border-radius: 20px;
+        border-style: none;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

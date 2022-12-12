@@ -1,0 +1,25 @@
+@import "./../../sassStyles/index";
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__user {
+        width: 90%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & div {
+            width: 90%;
+            word-break: keep-all;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    }
+}
